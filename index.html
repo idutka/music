@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <title>Log panel</title>
+        <meta content="" name="description" />
+        <meta content="" name="keywords" />
+
+        <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+
+        <link type="text/css" href="logpanel/css/styles.css" rel="stylesheet" />
+        <link type="text/css" href="logpanel/css/flip.css" rel="stylesheet" />
+
+        
+        <script type="text/javascript" src="logpanel/js/myscript.js"></script>
+
+        <link rel="stylesheet" href="logpanel/css/validationEngine.jquery.css" type="text/css"/>
+        <script src="logpanel/js/jquery.validationEngine-en.js" type="text/javascript" charset="utf-8"></script>
+        <script src="logpanel/js/jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
+
+    </head>
+    <body>
+    <div id="wrapper">
+
+    <section class="container">
+    <div id="card">
+      <figure class="front">
+                <div id="forma">
+                <div class="plshadow2 panel">
+                <div class="plshadow1 panel">
+                <div class="plogin panel">
+                    <img src='logpanel/img/foto.png' alt='foto'>
+                    <form id="formsignin" method="POST">
+                        <div class="inpemail inp">
+                            <div class="user"></div>
+                            <input class="valid validate[required]" type="text" name="login" placeholder="login" >
+                        </div>
+                        <div class="inppass inp">
+                            <div class="key"></div>
+                            <input class="valid validate[required]" type="password" name="pass" placeholder="password" >
+                        </div>
+                        <div id="forgotpass"><a href="#">Forgot your password?</a></div>
+                        <div class="submit">
+                            <button type="submit" class="btn signin" name="signin">Sign In</button>
+                            <button id="signup" class="btn signup" name="signup">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+
+                </div>
+                </div>
+
+                </div>
+      </figure>
+      <figure class="back">
+
+                <div id="forma">
+                <div class="plshadow2 panel">
+                <div class="plshadow1 panel">
+                <div class="plogin panel">
+                    <form id="formsignup" method="POST">
+                        <br/>
+                        <div class="inpemail inp">
+                            <div class="user"></div>
+                            <input class="valid validate[required]" type="text" name="login" placeholder="login">
+                        </div>
+                        <div class="inpemail inp">
+                            <div class="user"></div>
+                            <input class="valid validate[required,custom[email]]" type="text" name="email" placeholder="email">
+                        </div>
+                        <div class="inppass inp">
+                            <div class="key"></div>
+                            <input class="valid validate[required,minSize[6]]"  id="pass" type="password" name="pass" placeholder="password">
+                        </div>
+                        <div class="inppass inp">
+                            <div class="key"></div>
+                            <input class="valid validate[required,equals[pass]]" type="password" name="pass2" placeholder="password">
+                        </div>
+                        <div class="submit">
+                            <button type="submit"class="btn signup" name="signup">Sign Up</button>
+                            <button id="signin" class="btn signin" name="signin">Sign In</button>
+                        </div>
+                    </form>
+                </div>
+
+                </div>
+                </div>
+
+                </div>
+
+      </figure>
+    </div>
+  </section>
+          
+
+    </div>   <!-- end wrapper -->
+
+        <script src="logpanel/js/utils.js"></script>
+        <script src="logpanel/js/flip-card.js"></script>
+    </body>
+</html>
