@@ -1,251 +1,125 @@
-<!DOCTYPE HTML>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-        <title>theBestPlayer</title>
-        <meta content="" name="description" />
-        <meta content="" name="keywords" />
+<div id="wrapper">
+    <div id="header">
+        <div id="player">
+            
+      
 
-        <link type="text/css" href="css/styles.css" rel="stylesheet" />
-        <link type="text/css" href="jplayer/css/blue.monday/jplayer.blue.monday.css" rel="stylesheet" />
+<div id="jquery_jplayer_1" class="jp-jplayer"></div>
 
-        <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
-        <script type="text/javascript" src="jplayer/js/jquery.jplayer.min.js"></script>
-        <script type="text/javascript" src="jplayer/js/jplayer.playlist.min.js"></script>
+<div id="jp_container_1" class="jp-audio">
+    <div class="jp-type-single">
 
-        <script type="text/javascript" src="js/underscore.js"></script>
-        <script type="text/javascript" src="js/myscript.js"></script>
+        <div id="controls">
 
-    </head>
-    <body>
-        <div id="wrapper">
-            <div id="header">
-                <div id="player">
+        <div class="jp-gui jp-interface">
+            <ul class="jp-controls">
+                <li><a href="javascript:;" class="jp-previous" tabindex="1">previous</a></li>
+                <li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
+                <li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
+                <li><a href="javascript:;" class="jp-next" tabindex="1">next</a></li>
+                <li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>
+                <li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
+                <li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li>
+            </ul>
+            
+            <div class="jp-volume-bar">
+                <div class="jp-volume-bar-value"></div>
+            </div>
+            
+        </div>
+
+        </div>
+        <div id="play">
+            <div class="jp-title">
+            <ul>
+                <li>Cro Magnon Man</li>
+            </ul>
+            </div>
+
+            <div class="jp-progress">
+                <div class="jp-seek-bar">
+                    <div class="jp-play-bar"></div>
+                </div>
+            </div>
+            <div class="jp-time-holder">
+                <div class="jp-current-time"></div>
+                <div class="jp-duration"></div>
+            </div>
+
+        <div class="jp-no-solution">
+            <span>Update Required</span>
+            To play the media you will need to either update your browser to a recent version or update your 
+            <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+        </div>
+
+        </div>
+    </div>
+</div>
+
+
+        </div>
+
+        <div id="control">
+            <div id="viewcontrol">
+                <a href="#" class="list"></a>
+                <a href="#" class="list_img"></a>
+                <a href="#" class="blocks active"></a>
+                <a href="#" class="coverflow"></a>
+            </div>
+            <div id="search">
+                <form method="POST">
                     
-              
-
-        <div id="jquery_jplayer_1" class="jp-jplayer"></div>
-
-        <div id="jp_container_1" class="jp-audio">
-            <div class="jp-type-single">
-
-                <div id="controls">
-
-                <div class="jp-gui jp-interface">
-                    <ul class="jp-controls">
-                        <li><a href="javascript:;" class="jp-previous" tabindex="1">previous</a></li>
-                        <li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
-                        <li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
-                        <li><a href="javascript:;" class="jp-next" tabindex="1">next</a></li>
-                        <li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>
-                        <li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
-                        <li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li>
-                    </ul>
-                    
-                    <div class="jp-volume-bar">
-                        <div class="jp-volume-bar-value"></div>
-                    </div>
-                    
-                </div>
-
-                </div>
-                <div id="play">
-                    <div class="jp-title">
-                    <ul>
-                        <li>Cro Magnon Man</li>
-                    </ul>
-                    </div>
-
-                    <div class="jp-progress">
-                        <div class="jp-seek-bar">
-                            <div class="jp-play-bar"></div>
-                        </div>
-                    </div>
-                    <div class="jp-time-holder">
-                        <div class="jp-current-time"></div>
-                        <div class="jp-duration"></div>
-                    </div>
-
-                <div class="jp-no-solution">
-                    <span>Update Required</span>
-                    To play the media you will need to either update your browser to a recent version or update your 
-                    <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
-                </div>
-
-                </div>
+                    <input type="text" name="s" placeholder="Search Music" >
+                    <button class="search" type="submit" name="submit"></button>
+                </form>
             </div>
         </div>
 
+    </div>  <!-- end header -->
 
-                    
-                    
+    <div id="main">
+        <div id="left">
+            <div id="library">
+                <span>LIBRARY</span>
+                <ul>
+                    <li class="music">
+                        Music
+                    </li>
+                </ul>
+            </div>
+
+            <div id="nowplay">
+                <div class="title">
+                    Now Playing
                 </div>
-
-                <div id="control">
-                    <div id="viewcontrol">
-                        <a href="#" class="list"></a>
-                        <a href="#" class="list_img"></a>
-                        <a href="#" class="blocks active"></a>
-                        <a href="#" class="coverflow"></a>
-                    </div>
-                    <div id="search">
-                        <form method="POST">
-                            
-                            <input type="text" name="s" placeholder="Search Music" >
-                            <button class="search" type="submit" name="submit"></button>
-                        </form>
-                    </div>
+                <div class="nowsong">
+                    <img src="img/img0.jpg" alt="song">
                 </div>
-
-            </div>  <!-- end header -->
-
-            <div id="main">
-                <div id="left">
-                    <div id="library">
-                        <span>LIBRARY</span>
-                        <ul>
-                            <li class="music">
-                                Music
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div id="nowplay">
-                        <div class="title">
-                            Now Playing
-                        </div>
-                        <div class="nowsong">
-                            <img src="img/img0.jpg" alt="song">
-                        </div>
-                        <div class="footer">
-                            <a href="#" class="plus"></a>
-                            <a href="#" class="shuffle active"></a>
-                            <a href="#" class="repeat"></a>
-                            <a href="#" class="toggle"></a>
-                        </div>
-                    </div>
-                </div>  <!-- end left -->
-
-                <div id="right">
-
-                    <div id="options">
-                        <a href="#" class="noactive">Albums</a>
-                        <a href="#">Artist</a>
-                        <a href="#">Genre</a>
-                        <a href="#">Composers</a>
-                    </div>
-
-                    <div id="songs">
-
-                    
-                    </div>
-
-
-                </div>  <!-- end right -->
-            </div>  <!-- end main -->
-
-        </div>  <!-- end wrapper -->
-
-
-
-
-          <!-- BEGIN: Underscore Template Definition. -->
-    <script type="text/template" class="template">
-        
-            <% _.each( rc.listItems, function( listItem ){ %>
-                
-                <div class="song">
-                    <a href="#">
-                        <img src="<%- listItem.img %>" alt="">
-                        <p class="albom"><%- listItem.name %></p>
-                        <p><%- listItem.albom %></p>
-                    </a>
+                <div class="footer">
+                    <a href="#" class="plus"></a>
+                    <a href="#" class="shuffle active"></a>
+                    <a href="#" class="repeat"></a>
+                    <a href="#" class="toggle"></a>
                 </div>
+            </div>
+        </div>  <!-- end left -->
+
+        <div id="right">
+
+            <div id="options">
+                <a href="#" class="noactive">Albums</a>
+                <a href="#">Artist</a>
+                <a href="#">Genre</a>
+                <a href="#">Composers</a>
+            </div>
+
+            <div id="songs">
+
+            
+            </div>
 
 
-            <% }); %>
- 
-    </script>
- 
-    <script type="text/javascript">
- 
-        // order to render their markup.
-        _.templateSettings.variable = "rc";
- 
-        // Grab the HTML out of our template tag and pre-compile it.
-        var template = _.template(
-            $( "script.template" ).html()
-        );
- 
-        // Define our render data (to be put into the "rc" variable).
-        var templateData = {
-            listItems: [
-                {   img: "img/img9.jpg",
-                    name: "Misty May-Treanor9",
-                    albom: "Torches"
-                },
-                {   img: "img/img4.jpg",
-                    name: "Misty May-Treanor4",
-                    albom: "Torches"
-                },
-                {   img: "img/img1.jpg",
-                    name: "Misty May-Treano1r",
-                    albom: "Torches"
-                },
-                {   img: "img/img5.jpg",
-                    name: "Misty May-Treanor5",
-                    albom: "Torches"
-                },
-                {   img: "img/img4.jpg",
-                    name: "Misty May-Treanor4",
-                    albom: "Torches"
-                },
-                {   img: "img/img1.jpg",
-                    name: "Misty May-Treano1r",
-                    albom: "Torches"
-                },
-                {   img: "img/img5.jpg",
-                    name: "Misty May-Treanor5",
-                    albom: "Torches"
-                },
-                {   img: "img/img4.jpg",
-                    name: "Misty May-Treanor4",
-                    albom: "Torches"
-                },
-                {   img: "img/img1.jpg",
-                    name: "Misty May-Treano1r",
-                    albom: "Torches"
-                },
-                {   img: "img/img5.jpg",
-                    name: "Misty May-Treanor5",
-                    albom: "Torches"
-                },
-                {   img: "img/img4.jpg",
-                    name: "Misty May-Treanor4",
-                    albom: "Torches"
-                },
-                {   img: "img/img1.jpg",
-                    name: "Misty May-Treano1r",
-                    albom: "Torches"
-                },
-                {   img: "img/img5.jpg",
-                    name: "Misty May-Treanor5",
-                    albom: "Torches"
-                }
-            ]
-        };
- 
-        // Render the underscore template and inject it after the H1
-        // in our current DOM.
-        $( "#songs" ).append(
-            template(templateData)
-        );
- 
- 
-    </script>
+        </div>  <!-- end right -->
+    </div>  <!-- end main -->
 
-
-
-
-    </body>
-</html>
+</div>  <!-- end wrapper -->

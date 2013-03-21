@@ -97,7 +97,7 @@ a.jp-pause:hover {
 a.jp-stop, a.jp-previous, a.jp-next {
 	width:28px;
 	height:28px;
-	margin-top:6px;
+	margin-top:5px;
 }
 
 a.jp-stop {

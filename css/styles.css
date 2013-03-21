@@ -248,7 +248,8 @@ a:HOVER {
 
 #right #songs {
 	margin: 0 20px;
-	overflow: hidden;
+	overflow: scroll;
+	height: 580px;
 	text-align: center;
 }
 
@@ -257,9 +258,15 @@ a:HOVER {
 	float: left;
 }
 
+.song.tbox a{
+	width: 200px;
+	height: 230px;
+}
+
 .song a {
 	display: block;
 	padding: 5px;
+	overflow: hidden;
 }
 
 .song a:HOVER {
@@ -271,9 +278,31 @@ a:HOVER {
 	margin-top: 5px;
 }
 
+.song img {
+	width: 159px;
+	height: 159px;
+}
+
 .song .albom {
 	font-weight: bold;
 }
+
+.song.tlist span{
+	float: left;
+	width: 220px;
+	text-align: left;
+}
+
+.song.tlist p{
+	margin-top: 20px;
+	font-size: 18px;
+}
+
+.song.tlist i{
+	margin-top: 10px;
+	color: #CCCCCC;
+}
+
 
 /*sprite style*/
 /*#container li {

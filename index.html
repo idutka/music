@@ -7,11 +7,10 @@
         <meta content="" name="keywords" />
 
         <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+        <script type="text/javascript" src="js/underscore.js"></script>
 
         <link type="text/css" href="css/styles.css" rel="stylesheet" />
         <link type="text/css" href="jplayer/css/blue.monday/jplayer.blue.monday.css" rel="stylesheet" />
-
-        <script type="text/javascript" src="js/underscore.js"></script>
 
         <link type="text/css" href="logpanel/css/styles.css" rel="stylesheet" />
         <link type="text/css" href="logpanel/css/flip.css" rel="stylesheet" />
@@ -21,6 +20,44 @@
         <link rel="stylesheet" href="logpanel/css/validationEngine.jquery.css" type="text/css"/>
         <script src="logpanel/js/jquery.validationEngine-en.js" type="text/javascript" charset="utf-8"></script>
         <script src="logpanel/js/jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
+
+    <script type="text/template" class="box">
+        
+            <% _.each( rc.Albums, function( Album ){ %>
+                
+                <div class="song tbox">
+                    <a href="#">
+                        <img src="<%- Album.Img %>" alt="">
+                        <p class="albom"><%- Album.Title %></p>
+                        <p><%- Album.Artist %></p>
+                    </a>
+                </div>
+
+            <% }); %>
+ 
+    </script>
+
+    <script type="text/template" class="list">
+        
+            <% _.each( rc.Albums, function( Album ){ %>
+                
+                <div class="song tlist">
+                    <a href="#">
+                        <span>
+                        <img src="<%- Album.Img %>" alt="">
+                        </span>
+                        <span>
+                        <p class="albom"><%- Album.Title %></p>
+                        <p><%- Album.Artist %></p>
+                        <i><%- Album.Genre %></i>
+                        <p>(<%- Album.Audio.length %>)</p>
+                        </span>
+                    </a>
+                </div>
+
+            <% }); %>
+ 
+    </script>
 
     </head>
     <body>
