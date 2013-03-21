@@ -126,25 +126,28 @@ var playFactory = {
             });
         }
 
-        $("#viewcontrol .list_img").click(function () {
+        $("#viewcontrol .list_img").click(function (evt) {
             drawActivButton(this);
             playFactory.viewAlboms('list');
+            evt.preventDefault();
         })
 
-        $("#viewcontrol .blocks").click(function () {
+        $("#viewcontrol .blocks").click(function (evt) {
             drawActivButton(this);
             playFactory.viewAlboms('box');
+            evt.preventDefault();
         })
     },
 
     initAlbomEvent: function () {
        
        $('#songs').children().each(function(i){
-            $(this).click(function(){
+            $(this).click(function(evt){
                 var j = i;
-                // console.log(playFactory.list.Albums[j].Audio);
+                console.log(playFactory.list.Albums[j].Audio);
                 // playFactory.initPlayer(playFactory.list.Albums[j].Audio);
                 $('#nowplay img').attr("src", playFactory.list.Albums[j].Img);
+                evt.preventDefault();
             });
         });
             
