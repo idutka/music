@@ -1,7 +1,8 @@
 $(document).ready(function(){   
 
 var playFactory = {
-    makeCar: function (features) {
+    init: function () {
+        
     },
 
     createUser : function (user, pass) {
@@ -11,7 +12,7 @@ var playFactory = {
             dataType: 'jsonp',
             success: function (data) {
                 console.log(data);
-                alert(data.result);
+                $("body").append(data.result);
             }
         })
     },
@@ -23,7 +24,16 @@ var playFactory = {
             dataType: 'jsonp',
             success: function (data) {
                 console.log(data);
-                alert(data.result);
+                if(data.result){
+                    $('body').load('music.html', function() {
+                        alert('Load was performed.');
+                        $.getScript("jplayer/js/jquery.jplayer.min.js");
+                        $.getScript("jplayer/js/jplayer.playlist.min.js");
+                        $.getScript("js/myscript.js");
+                    });
+                }else{
+                    alert('ERROR!!!');
+                }
             }
         })
     }

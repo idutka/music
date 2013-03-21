@@ -65,6 +65,7 @@ div.jp-interface ul.jp-controls a {
 	display:block;
 	overflow:hidden;
 	text-indent:-9999px;
+	outline: none;
 }
 a.jp-play,
 a.jp-pause {
