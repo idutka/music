@@ -246,7 +246,7 @@ a:HOVER {
 
 #right #songs {
 	margin: 0 20px;
-	overflow-y: scroll;
+	overflow-y: auto;
 	height: 550px;
 	text-align: center;
 }
@@ -504,4 +504,19 @@ a:HOVER {
 	border-radius: 3px;
 	box-shadow: 0 0 5px rgba(0,0,0,0.25);
 	background-color: #FFFFFF;
+}
+
+
+
+
+
+
+#songs .gn{
+    margin-top:10px;
+    border-bottom: 1px solid #CCCCCC;
+    overflow: hidden;
+}
+
+#songs .title{
+    font-weight: bold;
 }

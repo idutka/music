@@ -1,10 +1,23 @@
 {"Albums": [
     {
-        "Genre": "Classical",
-        "Artist": "Johann Sebastian Bach",
-        "Title": "Matthaus Passion (1993)",
-        "Img": "http://s42.radikal.ru/i097/1303/5d/a9c183322f21.jpg",
-        "Audio": []
+        "Genre": "Rock",
+        "Artist": "Korn",
+        "Title": "The Path of Totality",
+        "Img": "http://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Korn_Path_of_Totality.jpg/220px-Korn_Path_of_Totality.jpg",
+        "Audio": [
+            {
+                "title": "Here It Comes Again",
+                "mp3": "http://cs4649.vk.me/u11379045/audios/c25079921d7d.mp3"
+            },
+            {
+                "title": "Get Up",
+                "mp3": "http://cs5088.vk.me/u34715501/audios/c1aa861574e6.mp3"
+            },
+            {
+                "title": "Narcissistic Cannibal ",
+                "mp3": "http://cs5900.vk.me/u143133618/audios/ecd62d170641.mp3"
+            }
+        ]
     },
     {
         "Genre": "Classical",

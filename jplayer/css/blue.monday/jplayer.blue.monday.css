@@ -131,7 +131,7 @@ div.jp-progress {
 div.jp-audio div.jp-progress {
 	height:5px;
 	position: absolute;
-	top: 60px;
+	top: 65px;
 	left: 60px;
 }
 div.jp-audio div.jp-type-single div.jp-progress {
@@ -263,7 +263,7 @@ div.jp-volume-bar-value {
 /* @group current time and duration */
 
 div.jp-audio div.jp-time-holder {
-	margin: 13px 30px
+	margin: 5px 30px
 }
 div.jp-audio div.jp-type-single div.jp-time-holder {
 	width:343px;
@@ -304,6 +304,12 @@ div.jp-title {
 	font-weight:bold;
 	text-align:center;
 }
+
+div.jp-title .jp-artist{
+	color: #868b97;
+	font-weight: normal;
+}
+
 
 div.jp-title {
 	width:100%;
@@ -494,6 +500,10 @@ a.jp-shuffle-off:hover {
 	position: absolute;
 	top: 170px;
 	left: -350px;
+	height: 289px;
+	width: 190px;
+
+	overflow-y: auto;
 }
 
 .jp-playlist-current a{

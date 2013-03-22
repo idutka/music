@@ -6,6 +6,7 @@ var playFactory = {
     list : null, 
     playlist: null,
 
+
     init: function () {
         $("#formsignin").validationEngine('attach', {
              onValidationComplete: function(form, status){
@@ -84,14 +85,19 @@ var playFactory = {
   
               success: function(data) {
                 playFactory.list = data;
-                playFactory.initPlayer(playFactory.list.Albums[11].Audio);
-                $('#nowplay img').attr("src", playFactory.list.Albums[11].Img);
+                playFactory.playAlbom(0);
                 playFactory.viewAlboms('box');
               },
               error: function(jqXHR) {
                     console.log(jqXHR)
               }
           });
+    },
+
+    playAlbom: function (n) {
+        playFactory.initPlayer(playFactory.list.Albums[n].Audio);
+        $('#nowplay img').attr("src", playFactory.list.Albums[n].Img);
+        $('#play .jp-artist').text(playFactory.list.Albums[n].Artist);
     },
 
     initPlayer: function (myplaylist) {
@@ -122,7 +128,7 @@ var playFactory = {
     },
 
     viewAlboms: function (type) {
-        // order to render their markup.
+
         _.templateSettings.variable = "rc";
  
         // Grab the HTML out of our template tag and pre-compile it.
@@ -132,8 +138,18 @@ var playFactory = {
 
   
         $( "#songs" ).html(
-            template(playFactory.list)
+            template(playFactory.list.Albums)
         );
+
+        
+
+        playFactory.initAlbomEvent();
+ 
+    },
+
+    viewSortAlboms: function () {        
+
+        playFactory.groupSongs();
 
         playFactory.initAlbomEvent();
  
@@ -150,6 +166,16 @@ var playFactory = {
             });
         }
 
+        function drawViewActiv (t) {
+            $("#options").children().each(function(){
+                if(t == this){
+                    $(this).addClass("noactive");
+                }else{
+                    $(this).removeClass("noactive");
+                }
+            });
+        }
+
         $("#viewcontrol .list_img").click(function (evt) {
             drawActivButton(this);
             playFactory.viewAlboms('list');
@@ -161,17 +187,31 @@ var playFactory = {
             playFactory.viewAlboms('box');
             evt.preventDefault();
         })
+
+        $("#options .viewalbom").click(function (evt) {
+            drawViewActiv(this);
+            playFactory.viewAlboms('box');
+            evt.preventDefault();
+        })
+
+        $("#options .viewganre").click(function (evt) {
+            drawViewActiv(this);
+            playFactory.viewSortAlboms();
+            evt.preventDefault();
+        })
+
+
+
     },
 
     initAlbomEvent: function () {
        
-       $('#songs').children().each(function(i){
+       $('#songs').find('.song').each(function(i){
             $(this).click(function(evt){
                 var j = i;
                 // console.log(playFactory.list.Albums[j].Audio);
                 if(playFactory.list.Albums[j].Audio.length > 0){
-                    playFactory.initPlayer(playFactory.list.Albums[j].Audio);
-                    $('#nowplay img').attr("src", playFactory.list.Albums[j].Img);
+                    playFactory.playAlbom(j);
                 }else{
                     $.ambiance({message: "Songs not found!"});
                 }
@@ -179,6 +219,45 @@ var playFactory = {
             });
         });
             
+    },
+
+
+    groupSongs: function () {
+        var data = playFactory.list.Albums;
+
+
+        $("#songs").html('');
+
+        var groupData = _.groupBy(data, function(obj) {
+          return obj.Genre;
+        });
+
+        var optGroups = [];
+
+        for (var key in groupData) {
+          if (groupData.hasOwnProperty(key)) {
+                // console.log(key);
+                var gd = groupData[key];
+                gd.title = key;
+                optGroups.push(gd);
+          }
+        }
+
+
+            for(var i = 0; i < optGroups.length; i++) {
+                console.log(optGroups[i]);
+
+                        _.templateSettings.variable = "rc";
+
+                        var template = _.template(
+                            $( "script.box").html()
+                        );
+
+                        var gr = $('<div>').attr("class","gn").append('<div>'+optGroups[i].title+'</div>').append(template(optGroups[i]));
+
+                        $( "#songs").append(gr);
+            }
+
     }
 
 }
