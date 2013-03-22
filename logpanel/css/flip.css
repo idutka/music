@@ -51,11 +51,9 @@
     }
 
     #card .front {
-      background: blue;
     }
 
     #card .back {
-      background: red;
       -webkit-transform: rotateY( 180deg );
          -moz-transform: rotateY( 180deg );
            -o-transform: rotateY( 180deg );

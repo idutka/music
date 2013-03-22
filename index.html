@@ -12,17 +12,20 @@
         <link type="text/css" href="css/styles.css" rel="stylesheet" />
         <link type="text/css" href="jplayer/css/blue.monday/jplayer.blue.monday.css" rel="stylesheet" />
 
-        <link type="text/css" href="logpanel/css/styles.css" rel="stylesheet" />
         <link type="text/css" href="logpanel/css/flip.css" rel="stylesheet" />
 
-        <script type="text/javascript" src="logpanel/js/myscript.js"></script>
+        <script type="text/javascript" src="js/myscript.js"></script>
 
+        <script src="logpanel/js/utils.js" type="text/javascript" charset="utf-8"></script>
         <link rel="stylesheet" href="logpanel/css/validationEngine.jquery.css" type="text/css"/>
         <script src="logpanel/js/jquery.validationEngine-en.js" type="text/javascript" charset="utf-8"></script>
         <script src="logpanel/js/jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
 
+        <link rel="stylesheet" href="css/jquery.ambiance.css" type="text/css"/>
+        <script src="js/jquery.ambiance.js" type="text/javascript" charset="utf-8"></script>
+
     <script type="text/template" class="box">
-        
+         
             <% _.each( rc.Albums, function( Album ){ %>
                 
                 <div class="song tbox">
@@ -61,6 +64,7 @@
 
     </head>
     <body>
+        <div id="page">
 
     <section class="container">
     <div id="card">
@@ -117,7 +121,7 @@
                             <input class="valid validate[required,equals[pass]]" type="password" name="pass2" placeholder="password">
                         </div>
                         <div class="submit">
-                            <button type="submit"class="btn signup" name="signup">Sign Up</button>
+                            <button type="submit" class="btn signup" name="signup">Sign Up</button>
                             <button id="signin" class="btn signin" name="signin">Sign In</button>
                         </div>
                     </form>
@@ -131,10 +135,7 @@
       </figure>
     </div>
   </section>
-          
 
-
-        <script src="logpanel/js/utils.js"></script>
-        <script src="logpanel/js/flip-card.js"></script>
+    </div>
     </body>
 </html>

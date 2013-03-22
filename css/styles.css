@@ -69,12 +69,10 @@ a:HOVER {
 	width: 100%;
 	height: 82px;
 	background-color: #F4F4F4;
-	overflow: hidden;
 }
 
 #player {
 	float: left;
-	overflow: hidden;
 }
 
 #player #controls{
@@ -248,8 +246,8 @@ a:HOVER {
 
 #right #songs {
 	margin: 0 20px;
-	overflow: scroll;
-	height: 580px;
+	overflow-y: scroll;
+	height: 550px;
 	text-align: center;
 }
 
@@ -385,7 +383,7 @@ a:HOVER {
 	width: 175px;
 	padding: 0 0 0 43px; 
 	border-radius: 2px;
-	background: url('../img/rightborder.png') no-repeat 30px center;
+	background: url('../logpanel/img/inputleftbg.png') no-repeat left center;
 	vertical-align: middle;
 	font-family: 'Candara';
 	color: #999999;
@@ -414,14 +412,15 @@ a:HOVER {
 	width: 30px;
 	height: 30px;
 	float: left;
+	position: relative;
 }
 
 .plogin .user {
-	background: url('../img/user.png') no-repeat center center;
+	background: url('../logpanel/img/user.png') no-repeat center center;
 }
 
 .plogin .key {
-	background: url('../img/key.png') no-repeat center center;
+	background: url('../logpanel/img/key.png') no-repeat center center;
 }
 
 .plogin #forgotpass {

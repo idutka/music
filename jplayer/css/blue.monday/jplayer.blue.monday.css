@@ -490,6 +490,16 @@ a.jp-shuffle-off:hover {
 	display:none;
 }
 
+.jp-playlist {
+	position: absolute;
+	top: 170px;
+	left: -350px;
+}
+
+.jp-playlist-current a{
+	color: #cccccc;
+}
+
 .jp-no-solution a {
 	color:#000;
 }
